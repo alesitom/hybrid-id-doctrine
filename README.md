@@ -128,7 +128,7 @@ ORM ID generator implementing `AbstractIdGenerator`. Produces HybridIds on entit
 
 ## Requirements
 
-- PHP >= 8.3
+- PHP 8.3, 8.4, or 8.5
 - Doctrine DBAL ^4.0
 - Doctrine ORM ^3.0
 - [alesitom/hybrid-id](https://github.com/alesitom/hybridId_package) ^3.2 (installed automatically)
