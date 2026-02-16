@@ -1,0 +1,28 @@
+{
+    "name": "alesitom/hybrid-id-doctrine",
+    "description": "Doctrine integration for HybridId — DBAL type and ORM ID generator",
+    "keywords": ["hybrid-id", "doctrine", "dbal", "orm", "uuid-alternative", "unique-id", "time-sortable"],
+    "license": "MIT",
+    "type": "library",
+    "require": {
+        "php": "^8.3",
+        "alesitom/hybrid-id": "^3.2",
+        "doctrine/dbal": "^4.0",
+        "doctrine/orm": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "HybridId\\Doctrine\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "HybridId\\Doctrine\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
