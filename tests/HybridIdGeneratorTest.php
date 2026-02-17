@@ -35,13 +35,13 @@ final class HybridIdGeneratorTest extends TestCase
 
     public function testGeneratesWithCustomCoreGenerator(): void
     {
-        $core = new CoreGenerator(profile: 'compact', node: 'A1');
+        $core = new CoreGenerator(profile: 'standard', node: 'A1');
         $generator = new HybridIdGenerator(generator: $core);
         $em = $this->createMock(EntityManagerInterface::class);
 
         $id = $generator->generateId($em, null);
 
-        $this->assertSame(16, strlen($id));
+        $this->assertSame(20, strlen($id));
         $this->assertSame('A1', CoreGenerator::extractNode($id));
     }
 
