@@ -31,7 +31,7 @@ class HybridIdGenerator extends AbstractIdGenerator
         ?CoreGenerator $generator = null,
         ?string $prefix = null,
     ) {
-        $this->generator = $generator ?? new CoreGenerator();
+        $this->generator = $generator ?? new CoreGenerator(requireExplicitNode: false);
         $this->prefix = $prefix;
     }
 
