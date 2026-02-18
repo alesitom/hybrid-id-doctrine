@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace HybridId\Doctrine\Tests;
 
-use Doctrine\DBAL\Platforms\AbstractPlatform;
-use Doctrine\DBAL\Platforms\MySQL80Platform;
-use Doctrine\DBAL\Platforms\PostgreSQLPlatform;
 use Doctrine\DBAL\Platforms\SQLitePlatform;
 use Doctrine\DBAL\Types\Type;
 use HybridId\Doctrine\HybridIdType;

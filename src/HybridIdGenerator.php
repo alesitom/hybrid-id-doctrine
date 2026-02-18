@@ -41,6 +41,7 @@ class HybridIdGenerator extends AbstractIdGenerator
 
         // Allow entities to declare their own prefix via a static method
         if ($prefix === null && $entity !== null && method_exists($entity, 'hybridIdPrefix')) {
+            /** @var string $prefix */
             $prefix = $entity::hybridIdPrefix();
         }
 
