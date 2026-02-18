@@ -2,6 +2,10 @@
 
 Doctrine integration for [HybridId](https://github.com/alesitom/hybridId_package) — DBAL type and ORM ID generator for compact, time-sortable unique IDs.
 
+[![Tests](https://img.shields.io/github/actions/workflow/status/alesitom/hybrid-id-doctrine/ci.yml?style=flat-square&label=tests)](https://github.com/alesitom/hybrid-id-doctrine/actions)
+[![Coverage](https://img.shields.io/codecov/c/github/alesitom/hybrid-id-doctrine?style=flat-square)](https://codecov.io/gh/alesitom/hybrid-id-doctrine)
+[![PHPStan](https://img.shields.io/badge/PHPStan-level%20max-blue?style=flat-square)](https://phpstan.org/)
+
 ## Installation
 
 ```bash
@@ -131,7 +135,7 @@ ORM ID generator implementing `AbstractIdGenerator`. Produces HybridIds on entit
 - PHP 8.3, 8.4, or 8.5
 - Doctrine DBAL ^4.0
 - Doctrine ORM ^3.0
-- [alesitom/hybrid-id](https://github.com/alesitom/hybridId_package) ^3.2 (installed automatically)
+- [alesitom/hybrid-id](https://github.com/alesitom/hybridId_package) ^4.1 (installed automatically)
 
 ## License
 

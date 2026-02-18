@@ -31,11 +31,11 @@ class HybridIdType extends Type
 
     public function convertToPHPValue(mixed $value, AbstractPlatform $platform): ?string
     {
-        return $value === null ? null : (string) $value;
+        return $value === null ? null : (string) $value; // @phpstan-ignore cast.string
     }
 
     public function convertToDatabaseValue(mixed $value, AbstractPlatform $platform): ?string
     {
-        return $value === null ? null : (string) $value;
+        return $value === null ? null : (string) $value; // @phpstan-ignore cast.string
     }
 }
