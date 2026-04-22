@@ -6,7 +6,7 @@
     "type": "library",
     "require": {
         "php": "^8.3",
-        "alesitom/hybrid-id": "^4.1",
+        "alesitom/hybrid-id": "^4.4",
         "doctrine/dbal": "^4.0",
         "doctrine/orm": "^3.0"
     },
