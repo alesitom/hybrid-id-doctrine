@@ -14,7 +14,7 @@ final class HybridIdGeneratorTest extends TestCase
     public function testGeneratesValidId(): void
     {
         $generator = new HybridIdGenerator();
-        $em = $this->createMock(EntityManagerInterface::class);
+        $em = $this->createStub(EntityManagerInterface::class);
 
         $id = $generator->generateId($em, null);
 
@@ -25,7 +25,7 @@ final class HybridIdGeneratorTest extends TestCase
     public function testGeneratesWithConstructorPrefix(): void
     {
         $generator = new HybridIdGenerator(prefix: 'usr');
-        $em = $this->createMock(EntityManagerInterface::class);
+        $em = $this->createStub(EntityManagerInterface::class);
 
         $id = $generator->generateId($em, null);
 
@@ -37,7 +37,7 @@ final class HybridIdGeneratorTest extends TestCase
     {
         $core = new CoreGenerator(profile: 'standard', node: 'A1');
         $generator = new HybridIdGenerator(generator: $core);
-        $em = $this->createMock(EntityManagerInterface::class);
+        $em = $this->createStub(EntityManagerInterface::class);
 
         $id = $generator->generateId($em, null);
 
@@ -48,7 +48,7 @@ final class HybridIdGeneratorTest extends TestCase
     public function testUsesEntityPrefixMethod(): void
     {
         $generator = new HybridIdGenerator();
-        $em = $this->createMock(EntityManagerInterface::class);
+        $em = $this->createStub(EntityManagerInterface::class);
         $entity = new class {
             public static function hybridIdPrefix(): string
             {
@@ -64,7 +64,7 @@ final class HybridIdGeneratorTest extends TestCase
     public function testConstructorPrefixOverridesEntityMethod(): void
     {
         $generator = new HybridIdGenerator(prefix: 'inv');
-        $em = $this->createMock(EntityManagerInterface::class);
+        $em = $this->createStub(EntityManagerInterface::class);
         $entity = new class {
             public static function hybridIdPrefix(): string
             {
@@ -80,7 +80,7 @@ final class HybridIdGeneratorTest extends TestCase
     public function testGeneratesUniqueIds(): void
     {
         $generator = new HybridIdGenerator();
-        $em = $this->createMock(EntityManagerInterface::class);
+        $em = $this->createStub(EntityManagerInterface::class);
 
         $ids = [];
         for ($i = 0; $i < 100; $i++) {
@@ -93,7 +93,7 @@ final class HybridIdGeneratorTest extends TestCase
     public function testNullEntityIsHandled(): void
     {
         $generator = new HybridIdGenerator();
-        $em = $this->createMock(EntityManagerInterface::class);
+        $em = $this->createStub(EntityManagerInterface::class);
 
         $id = $generator->generateId($em, null);
 
