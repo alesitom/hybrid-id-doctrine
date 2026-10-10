@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/), and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [2.2.2] - 2026-10-10
+
+Packaging-only release. No changes to `src/` or to the public API — upgrading is a drop-in.
+
+### Changed
+- The Composer dist archive no longer ships development files: `tests/`, CI config, tool configs (PHPUnit, PHPStan, PHP-CS-Fixer) are now `export-ignore`d via `.gitattributes`. Runtime files are unchanged (`src/`, `composer.json`, `LICENSE`, `README.md`, `CHANGELOG.md`) (#22)
+
 ## [2.2.1] - 2026-09-27
 
 Maintenance release. No changes to `src/` or to the public API — upgrading from 2.2.0 is a drop-in.
